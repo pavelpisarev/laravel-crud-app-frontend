@@ -14,7 +14,7 @@
                 <td class="align-middle text-center">{{book.title}}</td>
                 <td class="align-middle text-center">{{book.author.name}}</td>
                 <td class="align-middle d-flex justify-content-center">
-                    <button type="button" class="btn btn-success" @click="chechToken(`/books/edit/${book.id}`)">
+                    <button type="button" class="btn btn-success" v-on:click="chechToken(`/books/edit/${book.id}`)">
                         <i class="bi bi-pencil"></i>
                     </button>
                     <button type="button"
@@ -29,7 +29,7 @@
         </tbody>
     </table>
     <div class="row container-fluid justify-content-center">
-        <td class="text-center" @click="chechToken('/books/add')" colspan="3"><a class="btn btn-outline-primary"
+        <td class="text-center" v-on:click="chechToken('/books/add')" colspan="3"><a class="btn btn-outline-primary"
                 role="button">Add</a></td>
     </div>
 </template>
